@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AskMyrtle Demo</title>
+    <link rel="stylesheet" href="styles copy.css">
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+
+    <img id="bodybg" class="background" src="resources/coast.jpg" alt="">
+
+    <div class="row rh-100 rw-100 mx-0 position-relative">
+
+        <button id="open" class="d-none menuBtn rounded-3 btn pointer-event hover-scale">
+            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#201A21"><path d="M640-80 240-480l400-400 71 71-329 329 329 329-71 71Z"/></svg>
+        </button>
+
+        <!-- REPLACE COL-3 WITH COL-0 -->
+        <aside class="col-3 h-100 bg-1 m-0 py-1 px-2 z-3 position-relative">
+
+            
+
+
+            <!-- TITLE AND TOP BUTTONS -->
+            <div class="h-25 border-bottom border-1 bd-2 ">
+
+
+
+                <!-- LOGO -->
+                <div class="h-50 px-3 py-2">
+                    <img id="logo" class="h-100 w-100 position-relative" src="resources/AskMyrtleLogo.png" alt="AskMyrtle">
+                </div>
+
+                <!-- BUTTONS FOR INTERACTION -->
+                <div class="h-50 p-2 px-1 row d-flex align-items-center justify-content-evenly">
+                    
+                    <!-- FILTER BUTTON -->
+                    <button class="hover-scale bordered py-3 border border-2 border-white border-opacity-50 text-white btn col-5 rounded-3"> <span> Filter </span> </button>
+
+                    <!-- EXPORT BUTTON -->
+                    <button class="util btn col-2 py-3 rounded-3"><svg class="download" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+                    
+                    <!-- CLOSE MENU BUTTON -->
+                    <button class="menuBtn col-2 py-3 rounded-3 btn pointer-event hover-scale"><svg class="arrow back" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"><path d="M640-80 240-480l400-400 71 71-329 329 329 329-71 71Z"/></svg></button>
+                </div>
+
+
+
+            </div>
+
+            <!-- BOOKMARKS AREA -->
+            <div class="h-65 overflow-y-scroll p-3 ">
+
+                <div class="folder w-100 p-3 text-bg-primary rounded-3 h-auto">
+                    <!-- WHAT THE USER SEES INACTIVE -->
+                    <div class="header d-flex align-items-center justify-content-start">
+                        <svg class="arrow accord" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M640-80 240-480l400-400 71 71-329 329 329 329-71 71Z"/></svg>
+                        <span class="px-3 fs-3">Local</span>
+                    </div>
+
+                    <!-- 
+                    
+                    EXPANDED CONTENT
+                     
+                    TOGGLING PY-3 AND H-0 IN ORDER TO MAKE IT DOWNDOWNABLE
+                    -->
+                    <div class="content h-0 overflow-hidden">
+
+                        <div class="saveChat h-0 p-1 fs-6 ms-auto">
+                            Practice
+                        </div>
+                        <div class="saveChat h-0 p-1 fs-6 ms-auto">
+                            Practice2
+                        </div>
+                        <div class="saveChat h-0 p-1 fs-6 ms-auto">
+                            Practice3
+                        </div>
+                    </div>
+                </div>
+
+                <div class="folder w-100 p-3 text-bg-primary rounded-3 h-auto">
+                    <!-- WHAT THE USER SEES INACTIVE -->
+                    <div class="header d-flex align-items-center justify-content-start">
+                        <svg class="arrow accord" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M640-80 240-480l400-400 71 71-329 329 329 329-71 71Z"/></svg>
+                        <span class="px-3 fs-3">Bookmarks</span>
+                    </div>
+
+                    <!-- 
+                    
+                    EXPANDED CONTENT
+                     
+                    TOGGLING PY-3 AND H-0 IN ORDER TO MAKE IT DOWNDOWNABLE
+                    -->
+                    <div class="content h-0 overflow-hidden">
+
+                        <div class="saveChat h-0 p-1 fs-6 ms-auto">
+                            Practice
+                        </div>
+                        <div class="saveChat h-0 p-1 fs-6 ms-auto">
+                            Practice2
+                        </div>
+                        <div class="saveChat h-0 p-1 fs-6 ms-auto">
+                            Practice3
+                        </div>
+                    </div>
+                </div>
+
+                
+
+
+            <!-- END OF THE BOOKMARKS AREA -->
+            </div>
+
+            <!-- CONFIG AREA -->
+            <div class="h-10 border-top border-1 bd-2 d-flex align-items-center justify-content-between px-2">
+
+                <article class="h-100 d-flex align-items-center justify-content-start py-3">
+                    <img id="pfp" class="border border-2 border-white h-100" src="resources/pfp.jpg" >
+                    <h1 class="text-white fs-4 px-2">Username</h1>
+                </article>
+
+                
+                <svg class="hover-scale" xmlns="http://www.w3.org/2000/svg" height="2rem" viewBox="0 -960 960 960" width="2rem" fill="white"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+                
+            </div>
+
+        </aside>
+
+        <!-- CHAT AREA -->
+        <main class="z-3 col-9 h-100 m-0 position-relative d-flex justify-content-center align-items-center">
+
+            <!-- BG (ABS) -->
+            <img id="chatbg" class="background" src="resources/coast.jpg" alt="">
+
+            <!-- REAL CONTENT -->
+
+            <div id="chat" class="z-4 bg-1-50 rounded rounded-3">
+
+
+            </div>
+
+            <!-- INPUT FIELDS (ABS) -->
+            <div id="inputs" class="z-4 container-fluid text-white p-2 bg-1-50 border border-2 border-white border-opacity-10 rounded rounded-bottom-3 rounded-top-2">
+
+                <div class="row h-75">
+
+                        <!-- NEW CHAT BUTTON -->
+                    <div class="col-1 center justify-content-end position-relative">
+
+                        <button class="util h-75 py-2 px-0 even btn ">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#e8eaed"><path d="M280-280h84l240-238-86-86-238 238v86Zm352-266 42-44q6-6 6-14t-6-14l-56-56q-6-6-14-6t-14 6l-44 42 86 86ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h168q13-36 43.5-58t68.5-22q38 0 68.5 22t43.5 58h168q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm280-590q13 0 21.5-8.5T510-820q0-13-8.5-21.5T480-850q-13 0-21.5 8.5T450-820q0 13 8.5 21.5T480-790ZM200-200v-560 560Z"/></svg>
+                        </button>
+                    </div>
+
+                    <!-- BOOKMARK BUTTON -->
+                    <div class="col-1 center justify-content-start position-relative">
+                        <button class="util h-75 py-2 px-0 even btn ">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#e8eaed"><path d="M480-480ZM202-65l-56-57 118-118h-90v-80h226v226h-80v-89L202-65Zm278-15v-80h240v-440H520v-200H240v400h-80v-400q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H480Z"/></svg>
+                        </button>
+                        
+                    </div>
+
+                    <!-- TEXT INPUT -->
+                    <div id="text-div" class="col-9 center py-1 px-2">
+                        <input id="text" type="text" class="bg-1-75 fs-3 h-75 w-100 p-2 px-4 border border-1 border-white border-opacity-50 rounded rounded-5" placeholder="Click here">
+                    </div>
+
+                    <!-- SUBMIT BUTTON -->
+                    <div class="col-1 center">
+
+                        <button class="bg-3 h-50 submit center border border-1 border-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- FEEDBACK AREA -->
+                <div class="center text-center align-items-start h-25 border-top border-1 border-opacity-50 border-white">
+                    <p id="feedback" class="fst-italic fs-6 py-2">Feedback</p>
+                </div>
+                
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

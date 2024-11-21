@@ -1,0 +1,333 @@
+body {
+
+    background-color: #201A21;
+}
+
+* {
+
+    transition: ease-in;
+}
+
+.og-bg-1 {
+
+    background: #201A21;
+}
+
+.bg-1 {
+
+    background: #2f2b30;
+}
+
+.bg-1-50 {
+
+    background: #201A2180;
+}
+
+.bg-1-75 {
+
+    background: #201A21BF !important;
+}
+
+.bg-2 {
+
+    background: #f4f4f4;
+}
+
+.bg-3 {
+
+    background: #99f6e4E0;
+    transition: 100ms ease-in;
+}
+
+button.bg-3:hover {
+
+    background: #99f6e4;
+    transform: scale(1.1);
+}
+
+.bd-1 {
+
+    border-color: #fafafa;
+}
+
+.bd-2 {
+
+    border-color: #f4f4f4;
+}
+
+.bd-3 {
+
+    border-color: #99f6e4;
+}
+
+.h-10 {
+
+    height: 10%;
+}
+
+.h-65 {
+
+    height: 65%;
+}
+
+
+
+.rh-100 {
+
+    height: 100svh;
+}
+.rw-100 {
+
+    width: 100svw;
+}
+
+.center {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outline1 {
+
+    border: 1px solid red;
+}
+
+.outline2 {
+
+    border: 1px solid green;
+}
+
+.outline3 {
+
+    border: 1px solid blue;
+}
+
+::-webkit-scrollbar {
+
+    display: none;
+}
+
+.arrow {
+
+    transform: rotate(180deg);
+    transition: ease-in 100ms;
+}
+
+.arrow.back {
+
+    transform: rotate(0);
+}
+
+
+.download {
+
+    rotate: 90deg;
+}
+
+#logo::after {
+
+    content: '';
+
+    height: 1px;
+    width: 100%;
+
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    z-index: 23;
+}
+
+#pfp {
+
+    border-radius: 50%;
+}
+
+main {
+
+    z-index: -1;
+}
+
+.background {
+
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+
+    top:0;
+    left: 0;
+    z-index: 1;
+
+    filter: brightness(125%) contrast(125%) blur(0) saturate(200%);
+    
+}
+
+#bodybg {
+
+    z-index: -1234567 !important;
+}
+
+#inputs {
+
+    height: 15vh;
+    width: 95%;
+
+    position: absolute;
+    bottom: 2.5%;
+    left: 2.5%;
+}
+
+#text {
+
+    background: #201A2140;
+    color: whitesmoke;
+    border: none;
+}
+
+.even {
+
+    aspect-ratio: 1/1;
+}
+
+.submit {
+
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.util {
+
+    position: relative;
+    transition: 100ms ease-in;
+}
+
+.util.bordered:hover {
+
+    scale: 1 !important;
+}
+
+.util.bordered:hover span {
+
+    scale: 1.1;
+}
+.util::after {
+
+    content: '';
+
+    height: 1px;
+    width: 60%;
+
+    border: 0.5px solid white;
+
+    position: absolute;
+    top: 85%;
+    left: 20%;
+
+    transform: scaleX(0);
+    transition: 100ms ease-in;
+
+}
+
+.util:hover::after {
+
+    transform: scale(1);
+}
+
+.util:hover {
+
+    transform: scale(1.1);
+}
+
+#feedback {
+
+    cursor: pointer;
+    transition: ease-in;
+}
+
+#feedback:hover {
+
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+
+.hover-scale {
+
+    transition: 100ms ease-in;
+}
+
+.hover-scale:hover {
+
+    scale: 1.1;
+}
+
+/* MAIN CHAT AREA */
+
+
+svg {
+    cursor: pointer;
+}
+
+#chat {
+
+    height: 75%;
+    width: 95%;
+
+    position: absolute;
+    top: 2.5%;
+    left: 2.5%;
+}
+
+/* JAVASCRIPT ACTIVE CLASSES */
+
+/* FOR THE DROPDOWNS */
+.h-0 {
+
+    height: 0 !important;
+}
+
+/* FOR THE MENU */
+.col-0 {
+
+    width: 0% !important;
+}
+
+#open {
+
+    position: absolute;
+    top: 12.5%;
+    left: calc((8.333333% / 2) - 12px);
+    height: 24px;
+    width: 24px;
+    z-index: 4 !important;
+}
+
+.z-4 {
+
+    z-index: 4 !important;
+}
+
+.folder {
+
+    margin-bottom: 1rem;
+}
+
+.saveChat {
+
+    height: auto;
+    min-height: 1rem;
+    width: 85%;
+    cursor: pointer;
+    transition: ease-in 500s;
+    border-bottom: 2px solid #f4f4f4A0;
+}
+
+.content {
+
+    transition: ease-in 200ms;
+}
+
+.arrow.active {
+
+    transform: rotate(270deg);
+}
