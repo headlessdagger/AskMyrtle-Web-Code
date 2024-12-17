@@ -2,7 +2,7 @@ const button1 = document.querySelector('.button-box');
 const popup = document.querySelector('#profile-config-div');
 const main_div = document.querySelector('#main-div');
 const mask1 = document.querySelector('#mask1');
-const closeButton = document.querySelector('#closeX')
+const closeButton = document.querySelector('#closeX');
 
 function doStuff(){
     button1.classList.toggle('toggled1');
