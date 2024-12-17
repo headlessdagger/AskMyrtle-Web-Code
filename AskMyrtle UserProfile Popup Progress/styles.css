@@ -1,40 +1,45 @@
 *{
-
     box-sizing: border-box;
 }
 
-.page1 body{
+
+.blur {
+    filter: blur(6px);
+}
+
+
+body {
     font-family: "Nunito";
     background-color:black;
 }
 
-
-.page1 h1{
+h1 {
     color:white;
     text-align: center;
 }
 
 
-.page1 p{
+p {
     color:white;
     font-family: "Nunito";
     font-size: 18px;
     border-style:inset;
     border-color:white;
-    padding:2%;
+    padding: 2%;
 }
 
 
-.page1 .odd{
+.odd {
     color:violet;
 }
 
 
-.page1 .even{
+.even {
     color:cyan;
 }
 
-.page1 .button-box{
+
+.button-box {
  width: 25%;
  height: 25%;
  border: 4px solid red;
@@ -44,24 +49,24 @@
 }
 
 
-.page1 .button-box p{
+.button-box p {
     border: 1px solid transparent;
     text-align: center;
 }
 
 /*Popup related CSS*/
 
-
-
-.page1 .d-none{
+.d-none {
     display: none;
 }
 
-.page1 .toggled1{
+
+.toggled1 {
     border-color: blue;
 }
 
-#mask1{
+
+#mask1 {
     position: fixed;
     top: 0;
     left: 0;
@@ -70,6 +75,7 @@
     height: 100%;
     z-index: 2;
 }
+
 
 .vignette {
     position: fixed;
@@ -80,47 +86,130 @@
     box-shadow: 0 0 200px rgba(0, 0, 0, 0.799) inset;
   }
 
-  .page1 .popup{
+
+.popup {
     width: 50%;
     height: 80%;
-    background: #5a68ae;
+    background: #2c9cb0;
+    border: 3px solid rgb(213, 213, 213);
     border-radius: 10px;
     position: fixed;
     left: 25%;
     top: 10%;
     z-index: 3;
+    
 }
 
-.nested{
-    position: relative; 
-    height: 100%;
-    width: 100%;
-}
-
-.page1 #closeX{
-    position: absolute;
-    left: calc(100% - 30px);
-    cursor: pointer;
-}
-
-.page1 #popup-navpanel{
-    width: 25%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 2px solid yellow;
-    border-style: none solid none none;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.page1 #popup-navpanel p{
+.popup p {
     position: relative;
     top: 0;
     left: 0;
     color: Aquamarine;
     border-style: none;
+}
 
+#profile-config-div {
+    height: 90%;
+    top: 5%;
+}
+
+
+.nested {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+}
+
+
+#closeX {
+    position: absolute;
+    left: calc(100% - 30px);
+    cursor: pointer;
+    z-index: 5;
+}
+
+/* 
+--textcolor1: #2c9cb0;
+--textcolor2: Aquamarine;
+--bgcolor1-light-aqua: #2c9cb0;
+--bgcolor2-dark-aqua: #006e82;
+*/
+#navpanel-div {
+    width: 25%;
+    height: 100%;
+    margin: 0px;
+    position: relative;
+    top: 0;
+    left: 0;
+    /* border: 2px solid #eeff0041; */
+    background: #006e82;
+    border: 3px solid rgb(213, 213, 213);
+    border-width: 0 3px 0 0;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius:7px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#navpanel-div p{
+    margin: 5px;
+    padding: 0px;
+
+}
+
+
+#navpanel-div p:hover {
+    color: rgb(234, 233, 233);
+    cursor: pointer;
+}
+
+#profile-config-main-content-div{
+    /* 
+    width: calc(100% - #navpanel-separator['left'])
+    left: calc(100% - #prof-config-content-div['width'])
+     */
+    position: relative;
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.profile-config-content-box-div{
+    /* 
+    Have profile pic on left 50% and 
+    fname&lname stacked vertically centered
+    on right 50%.
+    */
+    position: relative;
+    margin: 22px;
+    background: #ffffff;
+    border-radius: 12px;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+.profile-config-content-box-div p {
+    color: #000000;
+}
+
+.profile-config-content-box-div h1{
+    color: #000000;
+    text-align: center;
+}
+
+.cred-box{
+    /*
+    "Save changes?" box at bottom of section
+    for password&secret phrase reset/change have button
+    */
 }

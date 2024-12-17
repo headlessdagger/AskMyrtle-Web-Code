@@ -6,35 +6,58 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-    <!--
-        1. Inline
-        2. Internal
-        3. External
-    -->
-
-    <h1>Test Header</h1>
-
-    <p id="p1" class="odd">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lobortis pellentesque dolor, nec facilisis ligula aliquam nec. Donec rutrum scelerisque risus, at porttitor nisi pretium eu. Sed ac est mattis, volutpat libero ultrices, tincidunt ex. Curabitur tincidunt egestas orci, ut imperdiet tortor feugiat non. Nam eleifend cursus velit eu porttitor. Cras et efficitur risus. Sed sollicitudin est dui, non pellentesque felis luctus a. Quisque malesuada nisl erat, maximus dapibus eros scelerisque sit amet. Aliquam ut mi et ex venenatis placerat eget vel nibh.</p>
-    <p id="p2" class="even">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lobortis pellentesque dolor, nec facilisis ligula aliquam nec. Donec rutrum scelerisque risus, at porttitor nisi pretium eu. Sed ac est mattis, volutpat libero ultrices, tincidunt ex. Curabitur tincidunt egestas orci, ut imperdiet tortor feugiat non. Nam eleifend cursus velit eu porttitor. Cras et efficitur risus. Sed sollicitudin est dui, non pellentesque felis luctus a. Quisque malesuada nisl erat, maximus dapibus eros scelerisque sit amet. Aliquam ut mi et ex venenatis placerat eget vel nibh.</p>
-    <p id="p3" class="odd">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lobortis pellentesque dolor, nec facilisis ligula aliquam nec. Donec rutrum scelerisque risus, at porttitor nisi pretium eu. Sed ac est mattis, volutpat libero ultrices, tincidunt ex. Curabitur tincidunt egestas orci, ut imperdiet tortor feugiat non. Nam eleifend cursus velit eu porttitor. Cras et efficitur risus. Sed sollicitudin est dui, non pellentesque felis luctus a. Quisque malesuada nisl erat, maximus dapibus eros scelerisque sit amet. Aliquam ut mi et ex venenatis placerat eget vel nibh.</p>
-    <p id="p4" class="even">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lobortis pellentesque dolor, nec facilisis ligula aliquam nec. Donec rutrum scelerisque risus, at porttitor nisi pretium eu. Sed ac est mattis, volutpat libero ultrices, tincidunt ex. Curabitur tincidunt egestas orci, ut imperdiet tortor feugiat non. Nam eleifend cursus velit eu porttitor. Cras et efficitur risus. Sed sollicitudin est dui, non pellentesque felis luctus a. Quisque malesuada nisl erat, maximus dapibus eros scelerisque sit amet. Aliquam ut mi et ex venenatis placerat eget vel nibh.</p>
-    
-    <div class="button-box">
-        <p>Button1</p>
-    </div>
-    <div class="popup d-none" id="popup1">
+    <!-- Profile Configuration Popup -->
+    <div class="popup d-none" id="profile-config-div">
         <div class="nested">
             <svg id="closeX" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#a8a8a7"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
-
-            <div id="popup-navpanel">
-                <p>Tab 1</p>
-                <p>Tab 2</p>
-                <p>Tab 3</p>
+            <div id="navpanel-div">
+                <!-- 
+                animation when page section changes
+                vertical rounded bar that grows next to the tab
+                -->
+                <p>Account</p>
+                <p>AI Config</p>
+                <p>UI Config</p>
+            </div>
+            <div id="profile-config-main-content-div">
+                <div class="profile-config-content-box-div" id="account-management-div">
+                    <h1>Account Info</h1>
+                    <div class="cred-box">
+                        <p>First Name</p>
+                    </div>
+                    <p>Last Name</p>
+                    <p>Email</p>
+                    <p>Password</p>
+                    <p>Secret Phrase</p>
+                </div>
+                <div class="profile-config-content-box-div" id="AskMyrtle-div">
+                    <h1>AI Config</h1>
+                </div>
+                <div class="profile-config-content-box-div" id="ui-config-div">
+                    <h1>UI Config</h1>
+                </div>
             </div>
         </div>
     </div>
-    <div id="mask1" class="d-none"></div>
+    <div id="main-div">
+        <!--
+            1. Inline
+            2. Internal
+            3. External
+        -->
+
+        <h1>Test Header</h1>
+
+        <p id="p1" class="odd">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lobortis pellentesque dolor, nec facilisis ligula aliquam nec. Donec rutrum scelerisque risus, at porttitor nisi pretium eu. Sed ac est mattis, volutpat libero ultrices, tincidunt ex. Curabitur tincidunt egestas orci, ut imperdiet tortor feugiat non. Nam eleifend cursus velit eu porttitor. Cras et efficitur risus. Sed sollicitudin est dui, non pellentesque felis luctus a. Quisque malesuada nisl erat, maximus dapibus eros scelerisque sit amet. Aliquam ut mi et ex venenatis placerat eget vel nibh.</p>
+        <p id="p2" class="even">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lobortis pellentesque dolor, nec facilisis ligula aliquam nec. Donec rutrum scelerisque risus, at porttitor nisi pretium eu. Sed ac est mattis, volutpat libero ultrices, tincidunt ex. Curabitur tincidunt egestas orci, ut imperdiet tortor feugiat non. Nam eleifend cursus velit eu porttitor. Cras et efficitur risus. Sed sollicitudin est dui, non pellentesque felis luctus a. Quisque malesuada nisl erat, maximus dapibus eros scelerisque sit amet. Aliquam ut mi et ex venenatis placerat eget vel nibh.</p>
+        <p id="p3" class="odd">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lobortis pellentesque dolor, nec facilisis ligula aliquam nec. Donec rutrum scelerisque risus, at porttitor nisi pretium eu. Sed ac est mattis, volutpat libero ultrices, tincidunt ex. Curabitur tincidunt egestas orci, ut imperdiet tortor feugiat non. Nam eleifend cursus velit eu porttitor. Cras et efficitur risus. Sed sollicitudin est dui, non pellentesque felis luctus a. Quisque malesuada nisl erat, maximus dapibus eros scelerisque sit amet. Aliquam ut mi et ex venenatis placerat eget vel nibh.</p>
+        <p id="p4" class="even">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lobortis pellentesque dolor, nec facilisis ligula aliquam nec. Donec rutrum scelerisque risus, at porttitor nisi pretium eu. Sed ac est mattis, volutpat libero ultrices, tincidunt ex. Curabitur tincidunt egestas orci, ut imperdiet tortor feugiat non. Nam eleifend cursus velit eu porttitor. Cras et efficitur risus. Sed sollicitudin est dui, non pellentesque felis luctus a. Quisque malesuada nisl erat, maximus dapibus eros scelerisque sit amet. Aliquam ut mi et ex venenatis placerat eget vel nibh.</p>
+        
+        <div class="button-box">
+            <p>Button1</p>
+        </div>
+        <div id="mask1" class="d-none"></div>
+    </div>
     <script src="scripts.js"></script>
 </body>
 </html>
