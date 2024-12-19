@@ -6,12 +6,290 @@
     <title>AskMyrtle Demo</title>
     <link rel="stylesheet" href="styles copy.css">
     <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="export.css">
 </head>
 <body>
 
+    <!-- BACKGROUND IMAGE -->
     <img id="bodybg" class="background" src="resources/coast.jpg" alt="">
 
-    <div class="row rh-100 rw-100 mx-0 position-relative">
+    <div id="welcome" class="center z-5 h-100 w-100 bg-1-75 position-fixed top-0 start-0">
+        <div id="notif" class="overflow-hidden px-3 rounded rounded-2 border border-2 border-white border-opacity-50 bg-1">
+            <div id="welcomeTitle" class="h-50 w-100 border-bottom border-2 border-white border-opacity-25 center fs-3 fw-light text-white">
+                Would you like to take the turtorial?
+            </div>
+
+            <div class="row h-50 w-100 center justify-content-evenly">
+
+                <button class="col-4 text-white btn fs-4 fw-light btn-success">
+                    Turtorial
+                </button>
+
+                <button class="col-4 text-white btn fs-4 fw-light bg-1-50">
+                    Skip
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+     <!-- POP-UP (FIRST DIV IS THE MASK) -->
+     <div id="mask" class="d-none center z-5 h-100 w-100 bg-1-75 position-fixed top-0 start-0">
+
+        <div id="popup" class="overflow-hidden px-3 rounded rounded-5 border border-2 border-white border-opacity-50 bg-1">
+
+            <div class="position-relative h-100 w-100">
+
+                <div id="filter" class="d-none">
+
+                    <div class="h-100 w-100 text-white justify-content-start center flex-column mx-auto position-relative p-2">
+
+                        <h1 class="display-4 ps-2 py-2 mb-2 border-bottom border-white border-opacity-25 titleSpacing"> Filtering </h1>
+
+                        <h3 class="fs-3 my-2 mb-4 fw-light">Select the following folder catagorizations to be filtered through: </h3>
+                
+                        <div class="w-100 h-50 border-opacity-25 border border-2 rounded-3 row center justify-content-end">
+                
+                            <div class="form-check col-3 center gap-3 fs-3">
+                                <input class="form-check-input" type="checkbox" value="Red" id="" />
+                                <label class="form-check-label" for=""> Red </label>
+                            </div>
+                
+                            <div class="form-check col-3 center gap-3 fs-3">
+                                <input class="form-check-input" type="checkbox" value="Red" id="" />
+                                <label class="form-check-label" for=""> Orange </label>
+                            </div>
+                
+                            <div class="form-check col-3 center gap-3 fs-3">
+                                <input class="form-check-input" type="checkbox" value="Red" id="" />
+                                <label class="form-check-label" for=""> Light Yellow </label>
+                            </div>
+                
+                            <div class="form-check col-3 center gap-3 fs-3">
+                                <input class="form-check-input" type="checkbox" value="Red" id="" />
+                                <label class="form-check-label" for=""> Yellow </label>
+                            </div>
+                
+                            <div class="form-check col-3 center gap-3 fs-3">
+                                <input class="form-check-input" type="checkbox" value="Red" id="" />
+                                <label class="form-check-label" for=""> Light Blue </label>
+                            </div>
+                
+                            <div class="form-check col-3 center gap-3 fs-3">
+                                <input class="form-check-input" type="checkbox" value="Red" id="" />
+                                <label class="form-check-label" for=""> Blue </label>
+                            </div>
+                
+                            <div class="form-check col-3 center gap-3 fs-3">
+                                <input class="form-check-input" type="checkbox" value="Red" id="" />
+                                <label class="form-check-label" for=""> Navy </label>
+                            </div>
+                
+                            <div class="form-check col-3 center gap-3 fs-3">
+                                <input class="form-check-input" type="checkbox" value="Red" id="" />
+                                <label class="form-check-label" for=""> White </label>
+                            </div>
+                            
+                            
+                        </div>
+
+                        <div class="popupBtns w-100 position-absolute row py-2 border-top border-2 border-white border-opacity-50">
+            
+                            <div class="col-6 h-100 py-4 d-flex align-items-start justify-content-start">
+            
+                                
+                            </div>
+            
+                            <div class="col-2 h-100 d-flex align-items-center justify-content-center ">
+            
+                                <button class="pCloser btn btn-outline-light  w-100">
+                                    Close
+                                </button>
+                            </div>
+
+                            <div class="col-2 h-100 d-flex align-items-center justify-content-center">
+            
+                                <button class="pCloser btn btn-outline-light  w-100">
+                                    Clear
+                                </button>
+                            </div>
+            
+                            <div class="col-2 h-100 d-flex align-items-center justify-content-center">
+                                <button class="btn btn-success  w-100">
+                                    Filter
+                                </button>
+            
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <div id="export" class="d-none">
+    
+                    <div class="h-100 w-100 text-white d-flex flex-column align-items-center gap-1 position-relative">
+
+                        <h1 class="display-4 ps-2 py-2 border-bottom border-white border-opacity-25 titleSpacing"> Export Chat </h1>
+            
+                        <!-- THIS IS FOR TABULAR CHANGES FOR THE FOLDER VS INDIV CHAT -->
+                        <ul id="tabs" class="nav w-100 nav-tabs row">
+                            <li class="nav-item col-6 text-center fs-4 position-relative">
+                                <a tab="folder" href="#" class="tab nav-link active">Folder</a>
+                            </li>
+            
+                            <li class="nav-item col-6 text-center fs-4 position-relative">
+                                <a tab="files" href="#" class="tab nav-link">Chat</a>
+                            </li>
+            
+                        </ul>
+            
+                        <!-- WHERE THE FILES WILL BEA -->
+                        <div id="exportFiles" class="overflow-y-scroll h-auto w-100 px-5">
+            
+                            <div id="folder" class="tab-info h-100 w-100c">
+                                <p>folder</p>
+                                <p>folder</p>
+                                <p>folder</p>
+                                <p>folder</p>
+                                <p>folder</p>
+                                <p>folder</p>
+                                <p>folder</p>
+                                <p>folder</p>
+            
+                            </div>
+            
+                            <div id='files' class="tab-info h-100 w-100c d-none">
+                                <p>file</p>
+                                <p>file</p>
+                                <p>file</p>
+                                <p>file</p>
+                                <p>file</p>
+                                <p>file</p>
+                                <p>file</p>
+                                <p>file</p>
+                                
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+
+                    <div class="popupBtns w-100 position-absolute row py-2 border-top border-2 border-white border-opacity-50">
+            
+                        <div class="col-8 h-100 py-4 d-flex align-items-start justify-content-start text-white">
+        
+                            <p class="fs-7">Note: Files exported as DocX</p>
+                        </div>
+        
+                        <div class="col-2 h-100 d-flex align-items-center justify-content-center border-start border-2 border-white border-opacity-50">
+        
+                            <button class="pCloser btn btn-outline-light  w-100">
+                                Close
+                            </button>
+                        </div>
+
+        
+                        <div class="col-2 h-100 d-flex align-items-center justify-content-center">
+                            <button class="btn btn-success  w-100">
+                                Submit
+                            </button>
+        
+                        </div>
+                    </div>
+    
+    
+                </div>
+    
+                <div id="feedback" class="d-none text-white p-2 overflow-scroll">
+                    <!-- TITLE -->
+                    <h1 class="text-center display-4 ps-2 py-2 border-bottom border-white border-opacity-25 titleSpacing"> Feedback </h1>
+    
+                    <div class="vstack center gap-3 py-3">
+
+                        <div class="w-75">
+                            <h3 class="fs-4 mb-3">What did you enjoy about AskMyrtle: </h3>
+                            <textarea name="like" id="like" class="fs-5 ms-2 bg-1 border border-white border-2 border-opacity-50 w-100 text-white-50 p-3"></textarea>
+                        </div>
+
+                        <div class="w-75">
+                            <h3 class="fs-4 mb-3">What did you find troublesome about AskMyrtle: </h3>
+                            <textarea name="like" id="like" class="fs-5 ms-2 w-100 bg-1 border border-white border-2 border-opacity-50 text-white-50 p-3"></textarea>
+                        </div>
+
+                        <div class="w-75">
+                            <h3 class="fs-4 mb-3">Are there any suggestions you would like to include: </h3>
+                            <textarea name="like" id="like" class="fs-5 ms-2 w-100 bg-1 border border-white border-2 border-opacity-50 text-white-50 p-3"></textarea>
+                        </div>
+                        
+                    </div>
+                     
+
+                    <!-- POPUP BTNS -->
+                    <div class="popupBtns bg-1 w-100 position-sticky row py-2 border-top border-2 border-white border-opacity-50">
+            
+                        <div class="col-8 h-100 py-4 d-flex align-items-start justify-content-start">
+        
+                            <p class="fs-7">Note: Files exported as DocX</p>
+                        </div>
+        
+                        <div class="col-2 h-100 d-flex align-items-center justify-content-center border-start border-2 border-white border-opacity-50">
+        
+                            <button class="pCloser btn btn-outline-light  w-100">
+                                Close
+                            </button>
+                        </div>
+        
+                        <div class="col-2 h-100 d-flex align-items-center justify-content-center">
+                            <button class="btn btn-success  w-100">
+                                Export
+                            </button>
+        
+                        </div>
+                    </div>
+                </div>
+    
+                <div id="user" class="d-none">
+    
+                    <div class="popupBtns bg-1-75 w-100 position-absolute row py-2 border-top border-2 border-white border-opacity-50">
+            
+                        <div class="col-8 h-100 py-4 d-flex align-items-start justify-content-start">
+        
+                            <p class="fs-7">Note: Files exported as DocX</p>
+                        </div>
+        
+                        <div class="col-2 h-100 d-flex align-items-center justify-content-center border-start border-2 border-white border-opacity-50">
+        
+                            <button class="pCloser btn btn-outline-light  w-100">
+                                Close
+                            </button>
+                        </div>
+        
+                        <div class="col-2 h-100 d-flex align-items-center justify-content-center">
+                            <button class="btn btn-success  w-100">
+                                Export
+                            </button>
+        
+                        </div>
+                    </div>
+                </div>
+    
+    
+                </div>
+
+                <button id="popupBtn" class="btn btn-close closer"></button>
+
+
+            </div>
+
+            
+
+
+        </div>
+
+    </div>
+
+    <!-- OVERALL PAGE -->
+    <div id="main" class="row rh-100 rw-100 mx-0 position-relative">
 
         <button id="open" class="d-none menuBtn rounded-3 btn pointer-event hover-scale">
             <svg class="arrow" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#201A21"><path d="M640-80 240-480l400-400 71 71-329 329 329 329-71 71Z"/></svg>
@@ -19,9 +297,6 @@
 
         <!-- REPLACE COL-3 WITH COL-0 -->
         <aside class="col-3 h-100 bg-1 m-0 py-1 px-2 z-3 position-relative">
-
-            
-
 
             <!-- TITLE AND TOP BUTTONS -->
             <div class="h-25 border-bottom border-1 bd-2 ">
@@ -37,10 +312,10 @@
                 <div class="h-50 p-2 px-1 row d-flex align-items-center justify-content-evenly">
                     
                     <!-- FILTER BUTTON -->
-                    <button class="hover-scale bordered py-3 border border-2 border-white border-opacity-50 text-white btn col-5 rounded-3"> <span> Filter </span> </button>
+                    <button class="filter popupBtn hover-scale bordered py-3 border border-2 border-white border-opacity-50 text-white btn col-5 rounded-3"> <span popup="filter"> Filter </span> </button>
 
                     <!-- EXPORT BUTTON -->
-                    <button class="util btn col-2 py-3 rounded-3"><svg class="download" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+                    <button class="export  util btn col-2 py-3 rounded-3"><svg class="download" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
                     
                     <!-- CLOSE MENU BUTTON -->
                     <button class="menuBtn col-2 py-3 rounded-3 btn pointer-event hover-scale"><svg class="arrow back" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"><path d="M640-80 240-480l400-400 71 71-329 329 329 329-71 71Z"/></svg></button>
@@ -57,7 +332,7 @@
                     <!-- WHAT THE USER SEES INACTIVE -->
                     <div class="header d-flex align-items-center justify-content-start">
                         <svg class="arrow accord" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M640-80 240-480l400-400 71 71-329 329 329 329-71 71Z"/></svg>
-                        <span class="px-3 fs-3">Local</span>
+                        <span class="px-3 fs-3 pointer">Local</span>
                     </div>
 
                     <!-- 
@@ -84,7 +359,7 @@
                     <!-- WHAT THE USER SEES INACTIVE -->
                     <div class="header d-flex align-items-center justify-content-start">
                         <svg class="arrow accord" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M640-80 240-480l400-400 71 71-329 329 329 329-71 71Z"/></svg>
-                        <span class="px-3 fs-3">Bookmarks</span>
+                        <span class="px-3 fs-3 pointer">Bookmarks</span>
                     </div>
 
                     <!-- 
@@ -122,22 +397,60 @@
                 </article>
 
                 
-                <svg class="hover-scale" xmlns="http://www.w3.org/2000/svg" height="2rem" viewBox="0 -960 960 960" width="2rem" fill="white"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+                <svg class="hover-scale popupBtn user"  xmlns="http://www.w3.org/2000/svg" height="2rem" viewBox="0 -960 960 960" width="2rem" fill="white"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
                 
             </div>
 
         </aside>
 
         <!-- CHAT AREA -->
-        <main class="z-3 col-9 h-100 m-0 position-relative d-flex justify-content-center align-items-center">
+        <main class="z-3 col-9 h-100 m-0 position-relative d-flex center flex-column justify-content-evenly py-3">
 
             <!-- BG (ABS) -->
             <img id="chatbg" class="background" src="resources/coast.jpg" alt="">
 
             <!-- REAL CONTENT -->
 
-            <div id="chat" class="z-4 bg-1-50 rounded rounded-3">
+            <div id="chat" class="px-0 pt-3 z-4 bg-1-50 rounded rounded-3 container fw-semibold overflow-y-scroll">
 
+                <!-- WELCOMING -->
+                <div class="w-100">
+                    <h1 class="display-2 text-white text-center">Welcome to AskMyrtle</h1>
+                    <h3 class="display-6 text-white text-center">Prompt the virtual assistent</h3>
+                    <h3 class="display-6 text-white text-center">or select a quick start</h3>
+                </div>
+                
+                <!-- PILLS -->
+                <div class="center flex-column w-100 h-auto sect">
+                    <button class="pill btn w-75 mx-auto fs-5 px-3 py-2 bg-1-50 border border-1 border-white border-opacity-25 my-3 text-white rounded-5">
+                        Give me the latest news of Myrtle Beach.
+                    </button>
+
+                    <button class="pill btn w-75 mx-auto fs-5 px-3 py-2 bg-1-50 border border-1 border-white border-opacity-25 my-3 text-white rounded-5">
+                        How can I benefit from tourism trends in Myrtle Beach?
+                    </button>
+
+                    <button class="pill btn w-75 mx-auto fs-5 px-3 py-2 bg-1-50 border border-1 border-white border-opacity-25 my-3 text-white rounded-5">
+                        How do I improve my business digital marketing in Myrtle Beach?
+                    </button>
+   
+                </div>
+
+                <!-- ACTUAL CHATS -->
+                 <div class="text-white px-0">
+
+                    <div class="prompts py-5 px-3 center bg-1-50">
+
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias laudantium assumenda iure praesentium blanditiis. Mollitia exercitationem perferendis aliquid voluptates porro voluptatem, nostrum impedit cum atque debitis consectetur ratione nisi tenetur doloremque quaerat enim, vel error eaque assumenda recusandae facere sunt dignissimos! Inventore id dicta voluptate totam asperiores aliquid tempore odio libero voluptas beatae odit ut, doloremque at, itaque deserunt et ex alias cupiditate nostrum?
+                    </div>
+    
+                    <div class="responses py-5 px-3 center bg-1-75">
+    
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, odio debitis hic cum architecto voluptatem aliquam saepe tempore laudantium culpa magni consequatur nulla molestiae odit? Assumenda, aspernatur aut tenetur accusantium culpa dolorum esse, consequatur adipisci qui pariatur inventore illum. Hic, non ipsum! Rerum id aliquam autem! Error culpa totam enim ad magnam, laboriosam quasi provident quam velit optio eius necessitatibus atque illo. Commodi, ad.
+                    </div>
+                 </div>
+
+                
 
             </div>
 
@@ -178,7 +491,7 @@
 
                 <!-- FEEDBACK AREA -->
                 <div class="center text-center align-items-start h-25 border-top border-1 border-opacity-50 border-white">
-                    <p id="feedback" class="fst-italic fs-6 py-2">Feedback</p>
+                    <p id="feedbackText" class="feedback popupBtn fst-italic fs-6 py-2">Feedback</p>
                 </div>
                 
             </div>
@@ -188,5 +501,7 @@
     </div>
 
     <script src="scripts.js"></script>
+    <script src="popup.js"></script>
+    <script src="export.js"></script>
 </body>
 </html>

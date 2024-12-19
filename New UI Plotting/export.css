@@ -37,12 +37,17 @@
     justify-content: center;
 }
 
-#exportBtns {
+.popupBtns {
 
     bottom: 0px;
     left: 1.55%;
     height: 15%;
     z-index: 3;
+}
+
+#feedback .popupBtns {
+
+    bottom: -1.2%;
 }
 
 .nav-tabs .nav-link.active {

@@ -14,8 +14,30 @@ const menuBtns = document.querySelectorAll('.menuBtn')
 // FOLDERS IN AN ARRAY
 const folders = document.querySelectorAll('.folder');
 
+// POPUP
+const popup = document.querySelector('#mask');
+
+// POPUP ACTIVATORS
+const popupListeners = document.querySelectorAll('.popupBtn');
+
+// POPUP CLOSERS
+const popupClosers = document.querySelectorAll('.closer');
+
+// CHATBOXES
+const chatBox = document.querySelector('#chat');
+
+// NOTIFICATION POPUP
+const notif = document.querySelector('#welcome');
+
+// TURTORIAL BTNS
+const turtBtns = document.querySelectorAll('#notif button');
+
+// CURRENT DISPLAY TAP ON POPUP
+let cur = ''
+
+
 // SIDEMENU TOGGLING
-menuBtns.forEach(btn => {
+menuBtns.forEach( btn => {
 
     btn.addEventListener('click', (e) => {
 
@@ -36,12 +58,10 @@ menuBtns.forEach(btn => {
         chat.classList.toggle('col-9');
         chat.classList.toggle('col-11'); 
 
+        chatBox.classList.toggle('active')
+
         // CHANGES THE BACKGROUND SO IT EXTENDS
         bg.classList.toggle('opacity-0');
-
-        // ADJUST TEXT-INPUT AREAS
-        document.querySelector('#inputs').classList.toggle('bg-1-75');
-        document.querySelector('#chat').classList.toggle('bg-1-75');
 
         // BUTTON DISPLAY MECHANICs
         document.querySelector('#open').classList.toggle('d-none');
@@ -49,6 +69,7 @@ menuBtns.forEach(btn => {
     })
 })
 
+// ACCORDION CONFIGURATION
 folders.forEach(folder => {
 
     folder.addEventListener('click', (e) => {
@@ -80,5 +101,16 @@ folders.forEach(folder => {
 
         })
         
+    })
+})
+
+// KEYBINDING FOR THE TURTORIAL BTNS
+turtBtns.forEach( btn => {
+
+    // TUROTRIAL SEPARATE CALLED FUNCTION BASED ON A SWITCH-CASE CONDITIONAL
+    
+    btn.addEventListener('click', () => {
+
+        notif.classList.toggle('d-none');
     })
 })
