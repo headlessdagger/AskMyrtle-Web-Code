@@ -14,21 +14,30 @@
     <img id="bodybg" class="background" src="resources/coast.jpg" alt="">
 
     <div id="welcome" class="center z-5 h-100 w-100 bg-1-75 position-fixed top-0 start-0">
-        <div id="notif" class="overflow-hidden px-3 rounded rounded-2 border border-2 border-white border-opacity-50 bg-1">
-            <div id="welcomeTitle" class="h-50 w-100 border-bottom border-2 border-white border-opacity-25 center fs-3 fw-light text-white">
-                Would you like to take the turtorial?
+        <div id="notif" class="flex-column center overflow-hidden px-3 rounded rounded-2 border border-2 border-white border-opacity-50 bg-1">
+            <div id="welcomeTitle" class="py-0 h-50 w-100 center fs-4 fw-light text-white">
+                <h4 class="fw-light py-3 border-bottom border-2 border-white border-opacity-25">
+                    Would you like to take the turtorial?
+
+                </h4>   
             </div>
 
-            <div class="row h-50 w-100 center justify-content-evenly">
+            <div class="row h-25 w-100 center justify-content-evenly">
 
-                <button class="col-4 text-white btn fs-4 fw-light btn-success">
+                <button class="col-4 text-white btn fs-6 fw-light btn-success">
                     Turtorial
                 </button>
 
-                <button class="col-4 text-white btn fs-4 fw-light bg-1-50">
+                <button class="col-4 text-white btn fs-6 fw-light bg-1-50">
                     Skip
                 </button>
+
+                               
             </div>
+            <div class="w-100 h-25 form-check justify-content-end center text-white-50 gap-1">
+                <input class="form-check-input" type="checkbox" value="True" id="greeting" />
+                <label class="form-check-label" for="greeting"> Don't show again </label>
+            </div> 
 
         </div>
     </div>
