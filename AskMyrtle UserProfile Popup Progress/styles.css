@@ -1,4 +1,4 @@
-*{
+*, ::after, ::before{
     box-sizing: border-box;
 }
 
@@ -183,11 +183,6 @@ p {
 }
 
 .profile-config-content-box-div{
-    /* 
-    Have profile pic on left 50% and 
-    fname&lname stacked vertically centered
-    on right 50%.
-    */
     position: relative;
     margin: 22px;
     background: #ffffff;
@@ -214,15 +209,17 @@ p {
 
 }
 
-#profile-placeholder{
-    height: 65%;
+#profile-placeholder-img{
+    height: 126px;
     aspect-ratio: 1;
-    /* transform: scale(60%, 60%); */
     border-radius: 50%;
 }
 
 #placeholder-img-div{
     padding: 0.25rem;
+    margin: 16px;
+    aspect-ratio: 1;
+    height: 126px;
 }
 
 #name-box-div{
