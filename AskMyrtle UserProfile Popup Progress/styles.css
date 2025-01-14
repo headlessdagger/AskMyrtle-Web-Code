@@ -203,7 +203,7 @@ p {
 }
 
 #user-overview-box-div{
-    height: 220px;
+    height: 180px;
     display: flex;
     flex-direction: row;
 
@@ -251,4 +251,37 @@ p {
 .cred-box-content p{
     margin: 0;
     padding: 0px 1px;
+}
+
+.buttoned-cred-box{
+    width: 75%;
+}
+
+.flex-col-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row-box{
+    display: flex;
+    flex-direction: row;
+}
+
+.cred-button-box{
+    width: 25%;
+    background-color: rgb(129, 129, 129);
+    border-radius: 8px;
+    margin-left: 10px;
+}
+
+.cred-button-box p{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
