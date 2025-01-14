@@ -373,6 +373,11 @@ svg {
     width: 100%; 
 }
 
+#exportFiles {
+
+    letter-spacing: 0.1rem;
+}
+
 .closer {
 
     color: white;
