@@ -2,16 +2,52 @@
 const links = document.querySelectorAll('a');
 const mask = document.querySelector('#mask');
 
-links.forEach(link => {
+let priorMenu = null
 
-    let menu = document.createElement("div")
-    menu.classList.add('menu')
+links.forEach( (link) => {
+
+    // MENU ICON ADDER
+    let menuDots = document.createElement("div")
+    menuDots.classList.add('menu')
+
+    link.appendChild(menuDots)
+
+    // MAKE THE MENU
+    let menu = document.querySelector('#menuTem').cloneNode(true)
+
     link.appendChild(menu)
 
     
+    // THIS ACTIVATES THE MENU
 
-    menu.addEventListener('click', () => {
-        
-        
+    menuDots.addEventListener('click', () => {
+
+        if (priorMenu == null) {
+
+            menu.classList.toggle('visually-hidden')
+            menu.classList.toggle('d-none')
+
+            priorMenu = menu
+        }
+
+        else if (priorMenu == menu) {
+
+            menu.classList.toggle('visually-hidden')
+            menu.classList.toggle('d-none')
+
+            priorMenu = null
+        }
+
+        else {
+
+            priorMenu.classList.toggle('visually-hidden')
+            priorMenu.classList.toggle('d-none')
+
+            menu.classList.toggle('visually-hidden')
+            menu.classList.toggle('d-none')
+
+            priorMenu = priorMenu == menu ? null : menu
+        }
+
     })
 });

@@ -5,3 +5,19 @@
     height: 2rem;
     width: 2rem;
 }
+
+a {
+
+    position: relative;
+}
+
+.menu-box {
+
+    height: 10vw;
+    width: 7.5vw;
+}
+
+.menu-box button {
+
+    height: 33%;
+}

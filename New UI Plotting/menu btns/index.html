@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="bg-black">
+
+    <!-- WILL COPY THIS NODE FOR THE MENU, BUT WILL HAVE NO-VISIBLE CLASS ONTO IT -->
 
     <div id="mask" class="bg-black top-0 left-0 h-100 w-100 bg-opacity-50 position-fixed d-none"></div>
 
@@ -41,6 +43,22 @@
 
         </a>
     </div>
+
+    <!-- COPY THIS COMPONENT TO BE IMPLEMENTED IN EVERY LINK -->
+    <div id="menuTem" class="ms-1 mb-3 visually-hidden d-none position-absolute top-0 start-100 menu-box rounded-2 border border-2 border-white border-opacity-75 d-flex flex-column align-items-center justify-content-between">
+
+        <button id="first" class="btn btn-outline-dark border-bottom border-1 border-opacity-25 fs-6 text-white w-100 py-1 rounded-0">
+            Rename
+        </button>
+
+        <button class="btn btn-outline-dark border-bottom border-1 border-opacity-25 fs-6 text-white w-100 py-1 rounded-0">
+            Move
+        </button>
+
+        <button class="btn-outline-dark text-danger btn fs-6 w-100 py-1 rounded-0">
+            Delete
+        </button>
+     </div>
 
     <script src="scripts.js"></script>
 </body>
