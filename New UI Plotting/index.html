@@ -160,7 +160,7 @@
                         <!-- WHERE THE FILES WILL BEA -->
                         <div id="exportFiles" class="overflow-y-scroll h-auto w-100 px-5">
             
-                            <div id="folder" class="tab-info h-100 w-100 fs-4">
+                            <div id="folder" class="tab-info h-100 w-100 fs-4 gap-1">
                                 
                                 <div class="form-check gap-3">
                                     <input class="form-check-input" type="checkbox" value="Red" id="" />
@@ -552,8 +552,24 @@
 
     </div>
 
+    <div id="menuTem" class="ms-1 mb-3 visually-hidden d-none position-absolute top-0 start-100 menu-box rounded-2 border border-2 border-white border-opacity-75 d-flex flex-column align-items-center justify-content-between">
+
+        <button id="first" class="btn btn-outline-dark border-bottom border-1 border-opacity-25 fs-6 text-white w-100 py-1 rounded-0">
+            Rename
+        </button>
+
+        <button class="btn btn-outline-dark border-bottom border-1 border-opacity-25 fs-6 text-white w-100 py-1 rounded-0">
+            Move
+        </button>
+
+        <button class="btn-outline-dark text-danger btn fs-6 w-100 py-1 rounded-0">
+            Delete
+        </button>
+     </div>
+
     <script src="scripts.js"></script>
     <script src="popup.js"></script>
     <script src="export.js"></script>
+    <script src="filemenus.js"></script>
 </body>
 </html>

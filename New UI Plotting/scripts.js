@@ -72,7 +72,7 @@ menuBtns.forEach( btn => {
 // ACCORDION CONFIGURATION
 folders.forEach(folder => {
 
-    folder.addEventListener('click', (e) => {
+    folder.querySelector('.header').addEventListener('click', (e) => {
 
         // ROTATE ARROWS
 

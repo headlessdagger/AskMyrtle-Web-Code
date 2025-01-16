@@ -436,3 +436,28 @@ svg {
 
     cursor: pointer;
 }
+
+/* filemenus css */
+.menu {
+
+    background: black;
+    border: 1px solid red;
+    height: 2rem;
+    width: 2rem;
+}
+
+.saveChat {
+
+    position: relative;
+}
+
+.menu-box {
+
+    height: 10vw;
+    width: 7.5vw;
+}
+
+.menu-box button {
+
+    height: 33%;
+}
